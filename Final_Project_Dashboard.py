@@ -7,12 +7,9 @@ Created on Tue Sep  5 21:41:11 2023
 
 import time  # to simulate a real time data, time loop
 
-import numpy as np  # np mean, np random
 import pandas as pd  # read csv, df manipulation
-import plotly.express as px  # interactive charts
 import streamlit as st  # 🎈 data web app development
 import altair as alt
-from altair import datum
 
 df=pd.read_excel('Master_Sheet.xlsx')
 df=df.sort_values('Year', ascending=True)
