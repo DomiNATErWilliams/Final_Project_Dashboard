@@ -5,13 +5,14 @@ Created on Tue Sep  5 21:41:11 2023
 @author: Nate
 """
 
+
 import time  # to simulate a real time data, time loop
 
 import pandas as pd  # read csv, df manipulation
 import streamlit as st  # 🎈 data web app development
 import altair as alt
 
-df=pd.read_excel('Master_Sheet.xlsx')
+df=pd.read_csv('Master_Sheet.csv')
 df=df.sort_values('Year', ascending=True)
 
 alt.data_transformers.disable_max_rows()
@@ -439,7 +440,7 @@ with tab3:
     fig_col1, fig_col2 = st.columns(2)
     with fig_col1:
         fig_col1.subheader('Master Dataframe of All Data')
-        df=pd.read_excel('Master_Sheet.xlsx')
+        df=pd.read_csv('Master_Sheet.csv')
         df=df.sort_values('Year', ascending=True)
     
         alt.data_transformers.disable_max_rows()
@@ -456,7 +457,7 @@ with tab3:
         
     with fig_col2:
         fig_col2.subheader('Summary Statistics of Data')
-        all_sports_df=pd.read_excel('Master_Sheet.xlsx')
+        all_sports_df=pd.read_csv('Master_Sheet.csv')
         num_of_seasons_df=pd.DataFrame()
         num_of_seasons_df['League']=list(all_sports_df['League'].unique())
         num_of_seasons=[]
