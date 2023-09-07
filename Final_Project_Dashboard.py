@@ -82,7 +82,7 @@ with tab1:
         arcs3=alt.Chart(champs).mark_arc().encode(
             theta='Championships per Number of Seasons Played',
             color= alt.Color("City").scale(scheme='category20b'),
-            tooltip=['City', 'Championships', 'Number of Teams']
+            tooltip=['City', 'Championships', 'Number of Teams', 'Championships per Number of Seasons Played']
         ).properties(title = 'Championships Won per Total Number of Seasons Played')
         
         st.write(arcs3)
