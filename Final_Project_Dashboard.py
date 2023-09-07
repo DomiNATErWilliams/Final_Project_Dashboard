@@ -56,7 +56,7 @@ with tab1:
         arcs=alt.Chart(champs).mark_arc().encode(
             theta="Championships",
             color= alt.Color("City").scale(scheme='tableau20'),
-            tooltip=['City', 'Championships', 'Number of Teams'],
+            tooltip=['City', 'Championships'],
         ).properties(title = 'Number of Championships by City')
         
         st.write(arcs)
@@ -82,7 +82,7 @@ with tab1:
         arcs3=alt.Chart(champs).mark_arc().encode(
             theta='Championships per Number of Seasons Played',
             color= alt.Color("City").scale(scheme='category20b'),
-            tooltip=['City', 'Number of Teams', 'Number of Teams']
+            tooltip=['City', 'Championships', 'Number of Teams']
         ).properties(title = 'Championships Won per Total Number of Seasons Played')
         
         st.write(arcs3)
