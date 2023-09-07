@@ -34,7 +34,7 @@ with tab1:
     
  
     
-    fig_col1, fig_col2 = st.columns(2)
+    fig_col1, fig_col2, fig_col3 = st.columns(3)
 
 ##############################################################################
     with fig_col1:
@@ -75,6 +75,18 @@ with tab1:
         ).properties(title = 'Number of Teams by City')
         
         st.write(arcs2)
+##########################################################################################   
+    with fig_col3:
+        champs['Championships per Number of Seasons Played']=champs['Championships']/champs['Number of Teams']
+
+        arcs3=alt.Chart(champs).mark_arc().encode(
+            theta='Championships per Number of Seasons Played',
+            color= alt.Color("City").scale(scheme='category20b'),
+            tooltip=['City', 'Number of Teams', 'Number of Teams']
+        ).properties(title = 'Championships Won per Total Number of Seasons Played')
+        
+        st.write(arcs3)
+        
         
         
 ###########################################################################################
