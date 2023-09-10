@@ -6,7 +6,7 @@ Created on Tue Sep  5 21:41:11 2023
 """
 
 
-import time  # to simulate a real time data, time loop
+#import time  # to simulate a real time data, time loop
 
 import pandas as pd  # read csv, df manipulation
 import streamlit as st  # 🎈 data web app development
