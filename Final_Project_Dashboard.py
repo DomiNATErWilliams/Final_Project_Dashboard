@@ -6,11 +6,12 @@ Created on Tue Sep  5 21:41:11 2023
 """
 
 
-#import time  # to simulate a real time data, time loop
 
 import pandas as pd  # read csv, df manipulation
 import streamlit as st  # 🎈 data web app development
 import altair as alt
+import time  # to simulate a real time data, time loop
+
 
 df=pd.read_csv('Master_Sheet.csv')
 df=df.sort_values('Year', ascending=True)
